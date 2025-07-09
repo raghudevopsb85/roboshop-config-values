@@ -62,6 +62,14 @@ variable "secrets" {
       }
     }
 
+    shipping = {
+      secret_mount = "roboshop-dev"
+      kv = {
+        CART_ENDPOINT       = "cart-dev.rdevopsb85.online:8080",
+        DB_HOST       = "mysql-dev.rdevopsb85.online"
+      }
+    }
+
   }
 }
 
