@@ -47,6 +47,21 @@ variable "secrets" {
       }
     }
 
+    mysql = {
+      secret_mount = "roboshop-dev"
+      kv = {
+        ROOT_PASSWORD       = "RoboShop@1"
+      }
+    }
+
+    rabbitmq = {
+      secret_mount = "roboshop-dev"
+      kv = {
+        APP_USER       = "roboshop",
+        APP_PASSWORD       = "roboshop123"
+      }
+    }
+
   }
 }
 
