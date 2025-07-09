@@ -72,6 +72,19 @@ variable "secrets" {
       }
     }
 
+    payment = {
+      secret_mount = "roboshop-dev"
+      kv = {
+        CART_HOST       = "cart-dev.rdevopsb85.online",
+        CART_PORT       = 8080,
+        USER_HOST       = "user-dev.rdevopsb85.online",
+        USER_PORT       = 8080,
+        AMQP_HOST       = "rabbitmq-dev.rdevopsb85.online",
+        AMQP_USER       = "roboshop",
+        AMQP_PASS       = "roboshop123"
+      }
+    }
+
   }
 }
 
