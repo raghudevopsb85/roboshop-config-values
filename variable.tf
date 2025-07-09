@@ -18,6 +18,18 @@ variable "secrets" {
         CATALOGUE_PORT       = 8080
       }
     }
+
+    frontend = {
+      secret_mount = "roboshop-dev"
+      kv = {
+        CATALOGUE_URL       = "http://catalogue-dev.rdevopsb85.online:8080/",
+        USER_URL       = "http://user-dev.rdevopsb85.online:8080/",
+        CART_URL       = "http://cart-dev.rdevopsb85.online:8080/",
+        SHIPPING_URL       = "http://shipping-dev.rdevopsb85.online:8080/",
+        PAYMENT_URL       = "http://payment-dev.rdevopsb85.online:8080/"
+      }
+    }
+
   }
 }
 
