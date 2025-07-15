@@ -25,20 +25,20 @@ variable "secrets" {
     frontend = {
       secret_mount = "roboshop-dev"
       kv = {
-        CATALOGUE_URL  = "http://catalogue-dev.rdevopsb85.online:8080/",
-        USER_URL       = "http://user-dev.rdevopsb85.online:8080/",
-        CART_URL       = "http://cart-dev.rdevopsb85.online:8080/",
-        SHIPPING_URL   = "http://shipping-dev.rdevopsb85.online:8080/",
-        PAYMENT_URL    = "http://payment-dev.rdevopsb85.online:8080/",
-        CATALOGUE_HOST = "catalogue-dev.rdevopsb85.online",
-        CATALOGUE_PORT = "8080",
-        USER_HOST      = "user-dev.rdevopsb85.online",
-        USER_PORT      = "8080",
-        CART_HOST      = "cart-dev.rdevopsb85.online",
-        CART_PORT      = "8080",
-        SHIPPING_HOST  = "shipping-dev.rdevopsb85.online",
-        SHIPPING_PORT  = "8080",
-        PAYMENT_HOST   = "payment-dev.rdevopsb85.online",
+        CATALOGUE_URL  = "http://catalogue-dev.rdevopsb85.online:8080/"
+        USER_URL       = "http://user-dev.rdevopsb85.online:8080/"
+        CART_URL       = "http://cart-dev.rdevopsb85.online:8080/"
+        SHIPPING_URL   = "http://shipping-dev.rdevopsb85.online:8080/"
+        PAYMENT_URL    = "http://payment-dev.rdevopsb85.online:8080/"
+        CATALOGUE_HOST = "catalogue-dev.rdevopsb85.online"
+        CATALOGUE_PORT = "8080"
+        USER_HOST      = "user-dev.rdevopsb85.online"
+        USER_PORT      = "8080"
+        CART_HOST      = "cart-dev.rdevopsb85.online"
+        CART_PORT      = "8080"
+        SHIPPING_HOST  = "shipping-dev.rdevopsb85.online"
+        SHIPPING_PORT  = "8080"
+        PAYMENT_HOST   = "payment-dev.rdevopsb85.online"
         PAYMENT_PORT   = "8080"
       }
     }
@@ -46,8 +46,12 @@ variable "secrets" {
     catalogue = {
       secret_mount = "roboshop-dev"
       kv = {
-        MONGO     = "true",
-        MONGO_URL = "mongodb://mongodb-dev.rdevopsb85.online:27017/catalogue"
+        MONGO       = "true"
+        MONGO_URL   = "mongodb://mongodb-dev.rdevopsb85.online:27017/catalogue"
+        DB_TYPE     = "mongo"
+        APP_GIT_URL = "https://github.com/roboshop-devops-project-v3/catalogue"
+        DB_HOST     = "mongodb-dev.rdevopsb85.online"
+        SCHEMA_FILE = "db/master-data.js"
       }
     }
 
