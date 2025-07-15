@@ -82,10 +82,12 @@ variable "secrets" {
     shipping = {
       secret_mount = "roboshop-dev"
       kv = {
-        CART_ENDPOINT = "cart-dev.rdevopsb85.online:8080",
-        DB_HOST       = "mysql-dev.rdevopsb85.online",
-        DB_USER       = "root",
+        CART_ENDPOINT = "cart-dev.rdevopsb85.online:8080"
+        DB_HOST       = "mysql-dev.rdevopsb85.online"
+        DB_USER       = "root"
         DB_PASS       = "RoboShop@1"
+        DB_TYPE       = "mysql"
+        APP_GIT_URL   = "https://github.com/roboshop-devops-project-v3/shipping"
       }
     }
 
